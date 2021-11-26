@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "vector": "cpp",
+        "map": "cpp",
+        "utility": "cpp",
+        "limits": "cpp",
+        "deque": "cpp"
+    }
+}
