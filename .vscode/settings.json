@@ -5,6 +5,7 @@
         "map": "cpp",
         "utility": "cpp",
         "limits": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "cmath": "cpp"
     }
 }
