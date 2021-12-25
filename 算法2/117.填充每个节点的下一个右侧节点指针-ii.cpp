@@ -1,7 +1,7 @@
-    /*
- * @lc app=leetcode.cn id=116 lang=cpp
+/*
+ * @lc app=leetcode.cn id=117 lang=cpp
  *
- * [116] 填充每个节点的下一个右侧节点指针
+ * [117] 填充每个节点的下一个右侧节点指针 II
  */
 
 // @lc code=start
@@ -28,8 +28,8 @@ public:
     Node* connect(Node* root) 
     {
         if(root == nullptr)
-            return root;
-        
+            return root;   
+
         queue<Node*> bfs;
         bfs.push(root);
         while(!bfs.empty())
@@ -40,15 +40,15 @@ public:
             {
                 Node* node = bfs.front();
                 bfs.pop();
+
                 if(i < n - 1)
                     node->next = bfs.front();
                 if(node->left != nullptr)
-                {       
                     bfs.push(node->left);
+                if(node->right != nullptr)
                     bfs.push(node->right);
-                }
             }
-        }
+        } 
         return root;
     }
 };
