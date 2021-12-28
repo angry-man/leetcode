@@ -1,4 +1,4 @@
-/*
+    /*
  * @lc app=leetcode.cn id=797 lang=cpp
  *
  * [797] 所有可能的路径
