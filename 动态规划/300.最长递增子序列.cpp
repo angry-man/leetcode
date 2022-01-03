@@ -19,7 +19,7 @@ public:
             for(int j = 0;j < i;j++)
             {
                 if(nums[j] < nums[i])
-                    max_j = max(max_len,dp[j]);
+                    max_j = max(max_j,dp[j]);
             }
             dp[i] = max_j + 1;
             max_len = max(max_len,dp[i]);
