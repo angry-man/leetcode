@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=94 lang=cpp
+ * @lc app=leetcode.cn id=653 lang=cpp
  *
- * [94] 二叉树的中序遍历
+ * [653] 两数之和 IV - 输入 BST
  */
 
 // @lc code=start
@@ -18,6 +18,24 @@
  */
 class Solution {
 public:
+    bool findTarget(TreeNode* root, int k) 
+    {
+        vector<int> res;
+        inorder(root, res);
+        int left = 0;
+        int right = res.size() - 1;
+        while(left < right)
+        {
+            if(res[left] + res[right] == k)
+                return true;
+            else if(res[left] + res[right] < k)
+                left++;
+            else 
+                right--;
+        }
+        return false;
+    }
+
     void inorder(TreeNode *root, vector<int> &res) 
     {
         if (root == nullptr) 
@@ -25,13 +43,6 @@ public:
         inorder(root->left, res);
         res.push_back(root->val); 
         inorder(root->right, res);
-    }
-
-    vector<int> inorderTraversal(TreeNode *root) 
-    {
-        vector<int> res;
-        inorder(root, res);
-        return res;
     }
 };
 // @lc code=end
