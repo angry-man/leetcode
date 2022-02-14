@@ -1,7 +1,7 @@
 /*
- * @lc app=leetcode.cn id=141 lang=cpp
+ * @lc app=leetcode.cn id=142 lang=cpp
  *
- * [141] 环形链表
+ * [142] 环形链表 II
  */
 
 // @lc code=start
@@ -15,17 +15,17 @@
  */
 class Solution {
 public:
-    bool hasCycle(ListNode *head) 
+    ListNode *detectCycle(ListNode *head) 
     {
         unordered_set<ListNode*> seen;
         while (head != nullptr) 
         {
             if (seen.count(head)) 
-                return true;
+                return head;
             seen.insert(head);
             head = head->next;
-        }
-        return false;
+        }    
+        return nullptr;
     }
 };
 // @lc code=end
