@@ -14,6 +14,7 @@
         "xutility": "cpp",
         "queue": "cpp",
         "type_traits": "cpp",
-        "xlocale": "cpp"
+        "xlocale": "cpp",
+        "stack": "cpp"
     }
 }
